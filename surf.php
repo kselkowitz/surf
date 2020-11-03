@@ -5,7 +5,7 @@
 //  SAFE UFW Rule Fixer
 
 define("MAXFRAUDSCORE",50); // value to add to UFW
-define("EMAILTO","user@domain.tld");  // will receive list of users with MFA not enabled
+define("EMAILTO","user@domain.tld");  
 define("EMAILFROM","user@domain.tld");
 
 $headers = "From: " . EMAILFROM . "\r\n";
