@@ -12,6 +12,7 @@ $headers = "From: " . EMAILFROM . "\r\n";
 $headers .= "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $body_details = "The following IPs are now blocked on Endpoints";
+$blockcount = 0;
 
 $ch = curl_init();
 
@@ -35,10 +36,15 @@ foreach ($safearray as $ip => $count)
     // add to email
     $body_details .= "<br>".$ip;
 
+    $blockcount++;
  }
 }
 
-mail(EMAILTO,"SAFE SURF has blocked IPs", $body_details,$headers);
+if ($blockcount>0)
+{
+  mail(EMAILTO,"SAFE SURF has blocked IPs", $body_details,$headers);
+}
+
 
 // close cURL resource
 curl_close($ch);
