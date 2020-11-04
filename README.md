@@ -3,7 +3,7 @@ Moves S.A.F.E. blocks into UFW
 
 
 
-1) Load the script to your Core server (suggest /usr/local/scripts/surf.php)
+1) Load the script to your Endpoints server (suggest /usr/local/scripts/surf.php)
 
 2) Edit constants at top of file (define lines)
 
